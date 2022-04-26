@@ -1,6 +1,9 @@
-# installation Process
+# Installation Process
 
 At first run npm install -g 
+
+User ID : test@test.com
+Password : 123
 
 # Testapp
 
