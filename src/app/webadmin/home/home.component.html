@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div style="min-height:300px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                &nbsp;
+            </div>    
+        </div>  
+        
+ 
+         
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+               
+              
+
+                <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                    <thead>
+                      <tr>
+                        <th>ID.</th>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let individual of individuals">
+                        <td>#000{{individual.person_id}}</td>
+                        <td>{{individual.individual_name}}</td>
+                        <td>{{individual.email}}</td>
+                        <td>{{individual.gender}}</td>
+                        <td>
+                             <div class="row">
+
+                              <div class="col-md-3 col-lg-3 col-sm-3">
+                                <button class="btn" (click)="editindividual( individual.person_id)"> <i class="fa fa-pencil"></i></button>
+                              </div>
+
+                              <div class="col-md-3 col-lg-3 col-sm-3">
+                                <button class="btn" (click)="viewindividual( individual.person_id)"> <i class="fa fa-eye"></i></button>
+                              </div>
+
+                              <div class="col-md-3 col-lg-3 col-sm-3">
+                                <button class="btn" (click)="deleteindividual( individual.person_id)"><i class="fa fa-trash"></i></button>
+                              </div>
+
+                             </div> 
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+            
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                &nbsp;
+            </div>    
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>  

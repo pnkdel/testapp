@@ -1,0 +1,118 @@
+<app-header></app-header>
+<div style="min-height:300px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                &nbsp;
+            </div>    
+        </div> 
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <h3>Update Personal Inforamtion</h3>
+            </div>    
+        </div>  
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+            <hr>
+            </div>    
+        </div> 
+        
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                &nbsp;
+            </div>    
+        </div> 
+         
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+               
+              
+                <form >
+                    
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Name of the person</label>
+                      <input type="text" class="form-control" name="individualName"  placeholder="Name of the person" [(ngModel)]="individualName">
+                      <br>
+                    </div>
+
+                
+                 
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Designation</label>
+                        <input type="text" class="form-control"  name="designation" placeholder="Designation" [(ngModel)]="designation">
+                        <br> 
+                    </div>   
+ 
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control"  name="email" placeholder="name@example.com" [(ngModel)]="email">
+                        <br> 
+                    </div>
+                  
+                    <div class="form-group col-lg-4">
+                      <label for="exampleFormControlSelect1">Gender</label>
+                      <select class="form-control" name="gender" [(ngModel)]="gender">
+                        <option value="MALE" [selected]="MALE ===gender">MALE</option>
+                        <option value="FEMALE" [selected]="FEMALE ===gender">FEMALE</option>
+                      </select>
+                      <br> 
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <label for="exampleFormControlSelect1">Status</label>
+                        <select class="form-control"  name="personalStatus" [(ngModel)]="personalStatus">
+                          <option value="SINGLE" [selected]="SINGLE ===personalStatus">SINGLE</option>
+                          <option value="MARRIED" [selected]="MARRIED ===personalStatus">MARRIED</option>
+                        </select>
+                        <br> 
+                      </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Appartment / House / Flat No</label>
+                        <input type="text" class="form-control" name="addressline1" placeholder="Appartment / House / Flat No" [(ngModel)]="addressline1">
+                        <br> 
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Area / Street</label>
+                        <input type="text" class="form-control"  name="addressline2" placeholder="Area / Street" [(ngModel)]="addressline2">
+                        <br> 
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">City</label>
+                        <input type="text" class="form-control"  name="city" placeholder="Name of the city" [(ngModel)]="city">
+                        <br> 
+                    </div> 
+
+                    <div class="form-group col-lg-4">
+                        <label for="exampleFormControlSelect1">Country</label>
+                        <select class="form-control"  name="country" [(ngModel)]="country">
+                          <option *ngFor="let country of allcountries" [value]="country.code"  > {{country.name}}</option>
+                        </select>
+                        <br> 
+                      </div>
+               
+                     <div class="form-group">
+                       
+                      <input  type="submit" class="btn btn-primary" name="" value="Submit"  (click)="updateperson()" > 
+                      
+                    </div> 
+                 
+                  </form>
+               
+            
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                &nbsp;
+            </div>    
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>  
