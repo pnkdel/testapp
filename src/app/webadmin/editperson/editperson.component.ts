@@ -21,8 +21,7 @@ export class EditpersonComponent implements OnInit {
   city:any;
   country:any;
   person_id:any;
-
-  allcountries = COUNTRIES;
+ allcountries: any;
 
   constructor(private personinfoService : PersoninfoService, private router: Router) { 
     this.personalData = this.personinfoService.getPersonalData();
@@ -40,7 +39,9 @@ export class EditpersonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.allcountries = COUNTRIES;
   }
+  
 
 
   updateperson() {

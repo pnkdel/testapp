@@ -22,8 +22,9 @@ export class ViewpersonComponent implements OnInit {
   city:any;
   country:any;
   person_id:any;
+  allcountries: any;
 
-  allcountries = COUNTRIES;
+
 
   constructor(private personinfoService : PersoninfoService, private router: Router) { 
     this.personalData = this.personinfoService.getPersonalData();
@@ -41,6 +42,7 @@ export class ViewpersonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.allcountries = COUNTRIES;
   }
 
 }

@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private personinfoService : PersoninfoService, private router: Router) {
     this.token = localStorage.getItem('jwt');
-    this.getAllRecords();
+   
    }
 
   ngOnInit(): void {
     console.log('LOCAL STORAGE ' + localStorage.getItem('jwt'));
-   
+    this.getAllRecords();
     this.dtOptions = {
       pagingType: 'full_numbers'
     };

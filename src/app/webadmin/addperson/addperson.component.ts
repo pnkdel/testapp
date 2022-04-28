@@ -19,16 +19,19 @@ export class AddpersonComponent implements OnInit {
   addressline2:any;
   city:any;
   country:any;
-
+  allcountries: any;
   
  
-  allcountries = COUNTRIES;
+  
 
   constructor( private personinfoService : PersoninfoService, private router: Router) { 
     console.log('Add Person');
+    
+    //console.log('Countries : ' + this.allcountries[0].name);
   }
 
   ngOnInit(): void {
+    this.allcountries = COUNTRIES;
   }
 
   
