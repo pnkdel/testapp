@@ -1,3 +1,10 @@
+# Installation Process
+
+At first run npm install -g 
+
+User ID : test@test.com
+Password : 123
+
 # Testapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
